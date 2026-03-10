@@ -37,3 +37,133 @@ Saving files for the memory and call it the unbelievable memory and whatever you
 <img width="1440" height="900" alt="Screenshot 2026-03-09 at 11 43 17" src="https://github.com/user-attachments/assets/a96ebd28-c5a7-4af9-a8e9-c37e2810c705" />
 
 
+Skip to content
+/
+Blog
+Changelog
+Docs
+Customer stories
+
+Back to changelog
+Improvement
+October 31, 2021 • 1 minute read
+Warning about bidirectional Unicode text
+
+A warning is now displayed when a file's contents include bidirectional Unicode text. Such text can be interpreted or compiled differently than it appears in a user interface. For example, hidden, bidirectional Unicode characters can be used to swap segments of text in a file. This can cause code to appear one way and be interpreted or compiled another way.
+
+image
+
+This security issue is the topic of the Common Vulnerabilities and Exposures (CVE) publication: CVE-2021-42574. If your use of bidirectional Unicode characters is intentional and not malformed, you can ignore the warning.
+
+To review a file for which this warning is displayed, open it in an editor that will display the hidden, bidirectional Unicode characters, like Visual Studio Code which highlights the characters by default. Then, verify that the characters are necessary and not disguising text that will be interpreted or compiled differently than it appears.
+
+For more information, refer to Trojan Source: Invisible Source Code Vulnerabilities.
+
+ecosystem & accessibility
+platform governance
+Share
+Back to changelog
+Related Posts
+Mar.03
+Release
+GitHub Code Quality enterprise policy
+application security
+
+...
++2
+Feb.24
+Improvement
+GitHub Code Quality: Organization-level dashboard in public preview
+application security
+
+...
++1
+Feb.17
+Release
+Required reviewer rule is now generally available
+collaboration tools
+
+...
++1
+Feb.17
+Improvement
+Custom properties and rule insights improvements
+platform governance
+Feb.13
+Improvement
+Updated GitHub status page experience
+actions
+
+...
++4
+Feb.03
+Release
+The Dependabot Proxy is now open source with an MIT license
+ecosystem & accessibility
+
+...
++1
+Jan.13
+Improvement
+Organization custom properties now generally available
+enterprise management tools
+
+...
++1
+Jan.12
+Improvement
+Selectively showing "act on your behalf" warning for GitHub Apps is in public preview
+ecosystem & accessibility
+Dec.09
+Improvement
+Repository custom properties: GraphQL API and URL type
+enterprise management tools
+
+...
++1
+Subscribe to our developer newsletter
+Discover tips, technical guides, and best practices in our biweekly newsletter just for devs.
+
+Enter your email*
+By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details.
+
+Back to top
+Site-wide Links
+Product
+Features
+Security
+Enterprise
+Customer Stories
+Pricing
+Resources
+Platform
+Developer API
+Partners
+Atom
+Electron
+GitHub Desktop
+Support
+Docs
+Community Forum
+Training
+Status
+Contact
+Company
+About
+Blog
+Careers
+Press
+Shop
+© 2026 GitHub, Inc.
+Terms
+Privacy
+GitHub on LinkedIn
+GitHub on Instagram
+GitHub on YouTube
+GitHub on X
+GitHub on TikTok
+GitHub on Twitch
+GitHub’s organization on GitHub
+×
+‏شو تعلمنا من هذا الحكي ؟ 
+‏قررنا نشتغل تطبيق من الأمام إلى الخلف وليس العكس يعني نبدأ بالمخ رجات الواجهة على قدر ما قصتها ل الوكلاء لا يوجد تبسيطتها هي بسيطة جدا دائرة في وسط شاشة فقط تتكلم هذه الدائرة عندما تقف في وسط الشاشة لا يوجد حواليها حتى الخلفية ممكن أن اجعلها تكون شفافة 100% ما في الخلفية والكلام 20% على طول المستخدم مع أدراج خاصية الدردشة النصية لكن مش باين بالوجه هي على الطلب تأتي لحالها بيفتح النسر ايدين الثنتين بيكتبوا داخله ما في كتابه كثير يعني  مبدئيا الدائرة دي نفسها بتكون طائرة في الشاشة حجمها صغير مثل حجم شكل المايك هنا حجم المايك ده اللي هو من macOS ما عندي أنا المهم يلا قربته وشك
