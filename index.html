@@ -388,16 +388,23 @@
         let peerConnection, dataChannel, mediaStream, audioElement, geminiWs, audioContext, elevenLabsWs, humeWs;
 
         function loadConfig() {
+            const VERSION = "v3.3.0_SOVEREIGN";
             const saved = localStorage.getItem('alarab777_voice_config');
-            let cfg = saved ? JSON.parse(saved) : { 
-                provider: 'openai', 
-                openaiKey: IMPERIAL_KEYS.openai, 
-                geminiKey: IMPERIAL_KEYS.gemini, 
-                elevenlabsKey: IMPERIAL_KEYS.elevenlabs, 
-                systemPrompt: EXALTED_PROMPT 
-            };
+            let cfg = saved ? JSON.parse(saved) : {};
             
-            // ♠️ FORCED IMPERIAL SYNC
+            // ♠️ FORCED CACHE NUKE IF CORRUPTED
+            if (cfg.version !== VERSION || cfg.openaiKey?.startsWith('AIza') || cfg.geminiKey?.startsWith('sk-')) {
+                cfg = { 
+                    version: VERSION,
+                    provider: 'openai', 
+                    openaiKey: IMPERIAL_KEYS.openai, 
+                    geminiKey: IMPERIAL_KEYS.gemini, 
+                    elevenlabsKey: IMPERIAL_KEYS.elevenlabs, 
+                    systemPrompt: EXALTED_PROMPT 
+                };
+            }
+            
+            // Absolute Enforcement
             if (!cfg.openaiKey) cfg.openaiKey = IMPERIAL_KEYS.openai;
             if (!cfg.geminiKey) cfg.geminiKey = IMPERIAL_KEYS.gemini;
             if (!cfg.elevenlabsKey) cfg.elevenlabsKey = IMPERIAL_KEYS.elevenlabs;
@@ -656,7 +663,7 @@
                     feed.scrollTop = 0;
                 }
                 updateKnowledgeFeed(); // Final sync
-            } catch (e) { log("Text Directive Failed", 'error'); }
+            } catch (e) { log(`Text Directive Failed: ${e.message}`, 'error'); console.error(e); }
         }
 
         document.getElementById('userInput').onkeydown = (e) => {
