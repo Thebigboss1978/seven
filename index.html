@@ -536,6 +536,7 @@
             peerConnection = new RTCPeerConnection();
             audioElement = document.createElement('audio');
             audioElement.autoplay = true;
+            document.body.appendChild(audioElement);
             peerConnection.ontrack = e => audioElement.srcObject = e.streams[0];
             dataChannel = peerConnection.createDataChannel('oai-events');
             dataChannel.onopen = () => { isSessionActive = true; setState('LISTENING', 'Bridge Secure. Speak now.'); };
