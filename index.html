@@ -371,7 +371,10 @@
     <script>
         const NGROK_MASTER = 'https://velar-thersa-nonhistorically.ngrok-free.dev';
         const HEADERS = { 'ngrok-skip-browser-warning': '777' };
-        let ENGINE_URL = localStorage.getItem('seVen_Engine_URL') || NGROK_MASTER;
+        let savedUrl = localStorage.getItem('seVen_Engine_URL');
+        let ENGINE_URL = savedUrl ? savedUrl : 
+                         (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') 
+                         ? window.location.origin : NGROK_MASTER;
 
         const IMPERIAL_KEYS = {
             openai: atob('c2stc3ZjYWNjdC13R2pEMFhWNzh5cTlDSk5SeDVKVEkxWmw1N1JJRll0T3VfaFNNZXZYOVpleW5aR053bzBRQVVVdnU5WFRsNGRER0UyYUI1X2xhVDNCbWJrRkpJLTNNSG8tMnZPdWpMbUQyTlJaRHpTSFFHclRjOC1oNzRIZGQ0WFkxeGNONVFYbmpjX2JkeTFaUUF4cmtNbG4wWFJqblpzUWFNAQ=='),
